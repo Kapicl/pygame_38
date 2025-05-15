@@ -5,7 +5,7 @@ pygame.init()
 
 size = (1280, 720)
 screen = pygame.display.set_mode(size)
-pygame.display.set_caption("Рисование фигур")
+pygame.display.set_caption("Рисование линий")
 BACKGROUND = (0, 0, 0)
 screen.fill(BACKGROUND)
 
@@ -76,7 +76,7 @@ while running:
 
 
     font = pygame.font.SysFont(None, 36)
-    mode_text = "Режим: СВЯЗАННЫЕ линии (ПКМ - переключить режимы)" if draw_connected else "Режим: ОТДЕЛЬНЫЕ линии (ПКМ - переключить режимы)"
+    mode_text = "Режим: Связанные линии" if draw_connected else "Режим: Развязанные линии"
     text_surface = font.render(mode_text, True, LINE_COLOR)
     screen.blit(text_surface, (10, 10))
 
